@@ -129,10 +129,10 @@ Mirror mode is controlled by this block at the top of the file:
 ### To use a different mirror key
 
 Change "key_code": "spacebar" to another key, for example:
-	•	"caps_lock"
-	•	"right_command"
-	•	"fn" (Globe key)
-	•	"left_control"
+- "caps_lock"
+- "right_command"
+- "fn" (Globe key)
+- "left_control"
 
 If you change the mirror key, you may also want to remove or adjust to_if_alone.
 
@@ -154,8 +154,9 @@ You are free to use, modify, and redistribute it.
 ---
 
 ### Acknowledgements
-	•	Randall Munroe (XKCD) for the original Mirrorboard idea
-	•	The Karabiner-Elements project and community
+
+- Randall Munroe (XKCD) for the original Mirrorboard idea
+- The Karabiner-Elements project and community
 
 ---
 
