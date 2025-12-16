@@ -106,9 +106,7 @@ Make sure you allow the system extension in **System Settings → Privacy & Secu
 	4.	Click Add rule
 	5.	Enable “Hold Space to mirror left-hand keys (XKCD Mirrorboard)”
 
-That’s it — no logout required.
-
-⸻
+---
 
 ### Changing the mirror key
 
@@ -138,8 +136,7 @@ Change "key_code": "spacebar" to another key, for example:
 
 If you change the mirror key, you may also want to remove or adjust to_if_alone.
 
-⸻
-
+---
 ### Keyboard layouts
 
 	•	This configuration is written with UK keyboards in mind
@@ -147,20 +144,20 @@ If you change the mirror key, you may also want to remove or adjust to_if_alone.
 	•	Use Karabiner → EventViewer to confirm key codes on your layout
 
 
-⸻
+---
 
 ### Licence
 
 This configuration is released under the MIT License.
 You are free to use, modify, and redistribute it.
 
-⸻
+---
 
 ### Acknowledgements
 	•	Randall Munroe (XKCD) for the original Mirrorboard idea
 	•	The Karabiner-Elements project and community
 
-⸻
+---
 
 Enjoy one-handed typing ✨
 Pull requests and adaptations welcome.
