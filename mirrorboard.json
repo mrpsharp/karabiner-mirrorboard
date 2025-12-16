@@ -1,0 +1,220 @@
+{
+  "title": "XKCD Mirrorboard (Caps Lock hold = mirror mode)",
+  "rules": [
+    {
+      "description": "Hold Space to mirror left-hand keys (XKCD Mirrorboard)",
+      "manipulators": [
+        /* ---------------- Mirror key behaviour ---------------- */
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [{ "set_variable": { "name": "mirror_mode", "value": 1 } }],
+          "to_after_key_up": [
+            { "set_variable": { "name": "mirror_mode", "value": 0 } }
+          ],
+          "to_if_alone": [{ "key_code": "spacebar" }]
+        },
+
+        /* ---------------- Hyphen --------------------*/
+        {
+          "type": "basic",
+          "from": { "key_code": "non_us_backslash", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "hyphen" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },        
+        /* ---------------- Number row ---------------- */
+        {
+          "type": "basic",
+          "from": { "key_code": "1", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "0" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "2", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "9" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "3", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "8" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "4", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "7" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "5", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "6" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        /* ---------------- QWERTY row ---------------- */
+        {
+          "type": "basic",
+          "from": { "key_code": "q", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "p" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "w", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "o" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "e", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "i" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "r", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "u" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "t", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "y" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+
+        /* ---------------- Home row ---------------- */
+        {
+          "type": "basic",
+          "from": { "key_code": "a", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "semicolon" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "s", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "l" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "d", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "k" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "j" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "g", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "h" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+
+        /* ---------------- Bottom row ---------------- */
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [{ "key_code": "slash" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "z", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "period" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "x", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "comma" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "c", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "m" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "v", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "n" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+
+        /* ---------------- Extra mirror-mode modifiers ---------------- */
+        {
+          "type": "basic",
+          "from": { "key_code": "tab", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "delete_or_backspace" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "caps_lock" },
+          "to": [{ "key_code": "return_or_enter" }],
+          "conditions": [
+            { "type": "variable_if", "name": "mirror_mode", "value": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}
