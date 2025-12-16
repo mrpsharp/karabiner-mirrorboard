@@ -139,9 +139,9 @@ If you change the mirror key, you may also want to remove or adjust to_if_alone.
 ---
 ### Keyboard layouts
 
-	•	This configuration is written with UK keyboards in mind
-	•	It should work on US keyboards with minor tweaks (notably around non_us_backslash and symbol placement)
-	•	Use Karabiner → EventViewer to confirm key codes on your layout
+- This configuration is written with UK keyboards in mind
+- It should work on US keyboards with minor tweaks (notably around non_us_backslash and symbol placement)
+- Use Karabiner → EventViewer to confirm key codes on your layout
 
 
 ---
